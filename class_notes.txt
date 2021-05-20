@@ -233,9 +233,9 @@ tsconfig.json
 
                                     ***** Components *****
 
-        - Reusable portion of complex UI Called as Component.
+        - Reusable portion of "complex UI" Called as Component.
 
-        - As a React Developer, we can create more than one component.
+        - As a React Developer, we can create more than "one" component.
 
         - As a React Developer, we can provide communication between one component to another component.
 
@@ -247,9 +247,30 @@ tsconfig.json
 
         - state & props
 
-        - component own data called as state.
+        - component own data called as "state".
 
-        - component receives the data from another component with the helps of props.
+        - component receives the data from another component with the helps of "props".
+
+*******************************************
+component-app
+            src
+              First.tsx
+
+              index.tsx
+            
+            public
+                index.html
+******************************************
+
+
+
+
+
+
+
+
+
+
 
 
 
