@@ -264,6 +264,76 @@ component-app
 
 
 
+**************************************************
+multi-components
+               src
+                 Header.tsx
+                 Body.tsx
+                 Footer.tsx
+
+                 Main.tsx
+
+                public  
+                    index.html
+**************************************************
+
+
+=> state
+
+=> props
+
+
+=> component communication
+
+    parent to child
+
+    child to parent
+
+=> material-ui
+
+
+=> single page applications
+
+
+=> redux
+
+=> saga
+
+=> thunk
+
+=> forms
+
+
+=> project  (miniproject)
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 
