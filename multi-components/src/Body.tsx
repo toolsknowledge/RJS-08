@@ -11,6 +11,7 @@ class Body extends Component<IProps,IState>{
     render(){
         return(
             <React.Fragment>
+                <h1>Pradeep</h1>
                 <h2>Shirts</h2>
                 <h2>Pants</h2>
                 <h2>Jeans</h2>
