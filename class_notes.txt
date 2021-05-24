@@ -278,33 +278,35 @@ multi-components
 **************************************************
 
 
-=> state
 
-=> props
+                                Change the State
 
+    setState() is the predefined function, used to change the state.
 
-=> component communication
+*****************************
+state-ex1
+        src  
+          State.tsx
 
-    parent to child
+          index.tsx
+******************************
 
-    child to parent
+                                        ***** props ****
+    - props is the predefined object in react.
 
-=> material-ui
-
-
-=> single page applications
-
-
-=> redux
-
-=> saga
-
-=> thunk
-
-=> forms
+    - props used to receive the data from one "component to another component"
 
 
-=> project  (miniproject)
+**************************************
+props-ex
+       src
+         First.tsx
+         Second.tsx
+
+         index.tsx
+**************************************
+
+
 
 
 
