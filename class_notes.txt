@@ -318,6 +318,28 @@ props-ex1
 ****************************************
 
 
+                                                Rest API Calls
+                                                --------------
+    - axios is the 3rd party module, used to make the rest api calls.
+
+    - we will download axios module by using npm or yarn tool.
+
+    > yarn add axios --save
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 
