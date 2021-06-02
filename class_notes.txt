@@ -326,6 +326,190 @@ props-ex1
 
     > yarn add axios --save
 
+                                                ***** POST Request *****
+
+mongodb
+-------
+    - mongodb database is NoSQL database.
+
+    - mongodb database supports JSON.
+
+    - JSON is light weight.
+
+    - automatically mongodb database also light weight database.
+
+    - default port number of mongodb database is 27017
+
+    - mongodb database provides cloud environment with the support of MongoDB Atlas.
+
+
+        URL : https://account.mongodb.com/account/login
+
+
+        SQL                                                     NoSQL
+-------------------------------------------------------------------------------------------
+Ex.
+    oracle                                                      mongodb
+    mysql                                                       cassandra
+    sqlserver                                                   ----
+                                                                ----
+
+    tables                                                      collections
+
+    rows                                                        document
+
+    primary key                                                 _id
+
+    database                                                    database
+-------------------------------------------------------------------------------------------------
+
+
+database name   :   R08
+
+collection name : login_details
+
+user : admin
+
+password : admin
+
+connection url : mongodb+srv://admin:admin@cluster0.jgnmk.mongodb.net/R08?retryWrites=true&w=majority
+
+
+
+node server implementation
+--------------------------
+    - nodejs is the backend technology.
+
+    - nodejs used to develop the servers.
+
+            Ex.
+                    Http Server
+
+                    TCP Server
+
+    - we will implement nodejs applications by using JavaScript.
+
+    - nodejs supports modules/libraries.
+
+    - we will download these libraries by using "npm" tool or "yarn" tool.
+
+    - automatically above libraries downloads to "node_modules" folder.
+
+
+1) express
+
+    - used to develop the restful webservices.
+
+    Ex.
+            GET
+            POST
+            PUT
+            DELETE
+            ---
+            ---
+            ---
+
+2) cors
+
+    - used to enable the communication between different "ports".
+
+    - used to enable the cors policy.
+
+3) mongodb
+
+    - used to connect to mongodb database.
+
+
+4) body-parser
+
+        - used to parse the data coming from client application.
+
+
+create the directory
+--------------------
+
+Ex.
+    server
+
+
+switch to server directory
+--------------------------
+
+    > cd server
+
+download the node modules
+-------------------------
+
+    > yarn add express cors body-parser mongodb --save
+
+
+implement the node server
+-------------------------
+
+    Ex.
+            server.js
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 
