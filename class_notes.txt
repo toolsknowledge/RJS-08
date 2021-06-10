@@ -471,6 +471,38 @@ test the rest api by using Postman
 
 
 
+                            integration of redux to react application
+                            -----------------------------------------
+
+1) create the react application
+
+        > npx create-react-app redux-ex2 --template typescript
+
+2) switch to react application
+
+        > cd redux-ex2
+
+3) download the libraries
+
+        => redux    @types/redux
+
+        => react-redux      @types/react-redux
+
+
+        > yarn add redux @types/redux react-redux @types/react-redux --save
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 
