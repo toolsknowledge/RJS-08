@@ -471,25 +471,63 @@ test the rest api by using Postman
 
 
 
-                            integration of redux to react application
-                            -----------------------------------------
+                
+
+Redux with React
+----------------
 
 1) create the react application
 
         > npx create-react-app redux-ex2 --template typescript
 
+            where "redux-ex2" is the name of the react application
+
+
 2) switch to react application
 
-        > cd redux-ex2
+    > cd redux-ex2
 
-3) download the libraries
-
-        => redux    @types/redux
-
-        => react-redux      @types/react-redux
+        automatically we can switch to react application
 
 
-        > yarn add redux @types/redux react-redux @types/react-redux --save
+3) download the libraries.
+
+   => axios  @types/axios                                 
+
+        - this library used to make the asynchrnous calls
+
+   => redux  @types/redux
+
+        - this library used to implement the redux Architecture.
+
+   => react-redux  @types/react-redux
+
+        - this library used to integrate redux Architecture to react application.
+
+   => redux-thunk  @types/redux-thunk
+
+        - this library used to moniter the actions.
+
+
+4) 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 
