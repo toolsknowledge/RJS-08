@@ -473,63 +473,87 @@ test the rest api by using Postman
 
                 
 
-Redux with React
-----------------
+                        ReactJS with Spring Boot Integration
+                        ++++++++++++++++++++++++++++++++++++
 
-1) create the react application
+1) execute the Spring boot application with cmd prompt
 
-        > npx create-react-app redux-ex2 --template typescript
+    > java -jar Mini-Project-0.0.1-SNAPSHOT.jar
 
-            where "redux-ex2" is the name of the react application
+2) test the rest api by using Postman.
 
+    > http://localhost:5000/api/v1/products
 
-2) switch to react application
+3) create the react application
 
-    > cd redux-ex2
+    > npx create-react-app springboot-ex --template typescript
 
-        automatically we can switch to react application
+4) switch to react application
 
+    > cd springboot-ex
 
-3) download the libraries.
+5) download the libraries / modules
 
-   => axios  @types/axios                                 
+        => redux @types/redux
 
-        - this library used to make the asynchrnous calls
+        => react-redux  @types/react-redux
 
-   => redux  @types/redux
+        => redux-thunk  @types/redux-thunk
 
-        - this library used to implement the redux Architecture.
+        => axios @types/axios
 
-   => react-redux  @types/react-redux
-
-        - this library used to integrate redux Architecture to react application.
-
-   => redux-thunk  @types/redux-thunk
-
-        - this library used to moniter the actions.
+        > yarn add redux @types/redux react-redux @types/react-redux redux-thunk @types/redux-thunk axios @types/axios --save
 
 
-4) 
+6) create the modal
+
+        **************************************
+        springboot-ex
+                    src
+                      modal
+                         Product.tsx
+        **************************************
+                finally "Product" modal is ready
 
 
+7) create the types
 
-
-
-
-
-
-
-
-
-
-
-
-
-
+        *****************************************
+        springboot-ex
+                    src
+                      types
+                        ProductActionTypes.tsx
+        ****************************************
 
 
 
+8) create the actions
 
+        ***********************************************
+        springboot-ex
+                    src
+                      actions
+                        ProductsAction.tsx
+        ***********************************************
+
+
+9) create the reducer
+
+     ************************************************
+     springboot-ex
+                 src
+                   reducer
+                      ProductReducer.tsx
+    ************************************************
+
+10) create the store
+
+    index.tsx
+
+
+11) create the component
+
+    App.tsx   (store)  (dispatch & subscribe)
 
 
 
