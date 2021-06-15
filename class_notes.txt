@@ -556,6 +556,65 @@ test the rest api by using Postman
     App.tsx   (store)  (dispatch & subscribe)
 
 
+                                            MERN Project
+
+1) create the account with AWS.
+
+        URL : https://portal.aws.amazon.com/billing/signup#/start
+
+
+2) deploy images to s3 bucket
+
+    name of the bucket : restbuck
+
+    Mango URL'S
+
+    https://restbuck.s3.ap-south-1.amazonaws.com/alphano.jpg
+
+    https://restbuck.s3.ap-south-1.amazonaws.com/safeda.jpg
+
+    https://restbuck.s3.ap-south-1.amazonaws.com/raw.jpg
+
+    https://restbuck.s3.ap-south-1.amazonaws.com/amrapali.jpg
+
+    https://restbuck.s3.ap-south-1.amazonaws.com/kesar.jpg
+
+
+3) create the account with mongodb Atlas
+
+    mongodb Atlas provides the cloud environment.
+
+    URL : https://www.mongodb.com/try
+
+
+4) store the above images path to mongodb database.
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 
