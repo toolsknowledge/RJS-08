@@ -590,6 +590,164 @@ test the rest api by using Postman
 4) store the above images path to mongodb database.
 
 
+    - mongodb is the "NoSQL" DataBase.
+
+    - mongodb supports "JSON".
+
+    - mongodb database is the "light weight" database.
+
+    - mongodb database by default running on port number "27017"
+
+    - mongodb database provides the cloud platform.
+
+            "mongodb atlas"
+
+                    SQL                         NoSQL
+-------------------------------------------------------------------------------------
+Ex.
+        Oracle                                      MongoDB
+        MySQL                                       CassandraDB
+        SQLServer
+
+
+        DataBases                                   DataBases
+
+        tables                                      collections
+
+        records                                     document
+
+        primary key                                 _id
+----------------------------------------------------------------------------------------
+
+database name : miniproject
+
+collection name : products
+
+user name       : admin
+
+password        :   admin
+
+connecttion url : mongodb+srv://admin:admin@cluster0.jgnmk.mongodb.net/miniproject?retryWrites=true&w=majority
+
+
+                                ****** server implementation *******
+    - NodeJS is the backend technology.
+
+    - NodeJS, develops the Rest API'S with the help of ExpressJS.
+
+    - we will develop NodeJS Applications by using JavaScript.
+
+node modules
+------------
+    1) express
+
+            express used to develop the rest services.
+
+            Ex.
+                    GET
+                    POST
+                    PUT
+                    DELETE
+                    ---
+                    ---
+                    ---
+
+    2) cors
+
+            used to enable the cors policy
+
+    3) mongodb / mongoose
+
+            used to connect to mongodb database.
+
+    4) body-parser
+
+        used to receive the data from the client application.
+
+we will download above modules by using either "yarn" tool, "npm" tool
+
+
+=> create the directory
+
+    Ex.
+        fruits_server
+
+
+=> switch to fruits_server
+
+    > cd fruits_server
+
+=> download the node modules
+
+    > yarn add mongodb express cors body-parser --save
+
+=> develop rest apis
+
+        server.js
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 
