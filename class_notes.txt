@@ -666,32 +666,30 @@ node modules
 
 we will download above modules by using either "yarn" tool, "npm" tool
 
-
 => create the directory
 
     Ex.
-        fruits_server
+         fruits_server
 
-
-=> switch to fruits_server
+=> switch to directory
 
     > cd fruits_server
 
 => download the node modules
 
-    > yarn add mongodb express cors body-parser --save
+        1) mongodb
 
-=> develop rest apis
+        2) cors
+
+        3) body-parser
+
+        4) express
+
+    > yarn add mongodb cors body-parser express --save
+
+=> create the server
 
         server.js
-
-
-
-
-
-
-
-
 
 
 
