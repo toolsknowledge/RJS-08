@@ -34,6 +34,7 @@ const ashokIT = mongodb.MongoClient;
 //where "ashokIT" is the reference variable, used to connect to mongodb database
 
 
+
 //create the GET Request
 app.get("/products",(req,res)=>{
     //tokens comparision
@@ -51,6 +52,26 @@ app.get("/products",(req,res)=>{
         }
     });
 });
+
+
+//rest api based on category
+app.get("/products/:category",(req,res)=>{
+    ashokIT.connect(`mongodb+srv://admin:admin@cluster0.gb2ri.mongodb.net/miniproject?retryWrites=true&w=majority`,(err,connection)=>{
+        if(err) throw err;
+        else{
+            const db = connection.db("miniproject");
+            db.collection("products").find({"category":req.params.category}).toArray((err,array)=>{
+                if(err) throw err;
+                else{
+                    res.send(array);
+                }
+            });
+        }
+    });
+});
+
+
+
 
 
 //assign the port number

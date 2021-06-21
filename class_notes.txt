@@ -692,6 +692,71 @@ we will download above modules by using either "yarn" tool, "npm" tool
         server.js
 
 
+=> finally following rest apis are ready.
+
+        http://localhost:8080/products
+
+        http://localhost:8080/products/{category}
+
+
+
+Integration of Above Rest API Calls to ReactJS
+==============================================
+1) create the react application
+
+    > npx create-react-app fruits-frontend --template typescript
+
+2) switch to react application
+
+    > cd fruits-frontend
+
+3) download the node modules
+
+        => redux @types/redux
+
+        => redux-thunk  @types/redux-thunk
+
+        => react-redux @types/react-redux
+
+        => axios  @types/axios
+
+        => react-router-dom @types/react-router-dom
+
+> yarn add redux @types/redux redux-thunk @types/redux-thunk react-redux @types/react-redux axios @types/axios react-router-dom @types/react-router-dom --save
+
+
+4) implement the thunk middleware for "http://localhost:8080/products"
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 
