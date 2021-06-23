@@ -725,7 +725,52 @@ Integration of Above Rest API Calls to ReactJS
 > yarn add redux @types/redux redux-thunk @types/redux-thunk react-redux @types/react-redux axios @types/axios react-router-dom @types/react-router-dom --save
 
 
-4) implement the thunk middleware for "http://localhost:8080/products"
+4) implement the thunk middleware for "http://localhost:8080/products
+
+
+        => model
+             ********************************
+             fruits_frontend
+                           src
+                             model
+                               Product.tsx
+            **********************************
+                    finally "Product" model is ready.
+
+        => types
+                *******************************************
+                fruits_frontend
+                              src
+                                types
+                                  ProductActionTypes.tsx
+                ********************************************
+
+        => action
+
+               ********************************************
+               fruits_frontend
+                             src
+                               actions
+                                  ProductActions.tsx
+                *********************************************
+                    finally "getProducts()" action is ready.
+
+        => reducer
+
+                ********************************************
+                fruits_frontend
+                              src
+                                reducer
+                                    ProductReducer.tsx
+                ********************************************
+                    finally "productReducer" is ready.
+
+        => store
+                
+        => dispatch & subscription  (component)
+
+
+
 
 
 
