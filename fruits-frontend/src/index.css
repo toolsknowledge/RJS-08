@@ -11,3 +11,30 @@ code {
   font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
     monospace;
 }
+
+.alert{
+   border: 1px solid gray;
+   padding: 10px;
+   margin: 3px;
+}
+
+.alert-danger{
+   background-color: #ff0000;
+}
+
+.alert-info{
+  background-color: grey;
+}
+
+.spinner{
+  color: gray;
+  font-size: 50px;
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+
+
+

@@ -769,6 +769,25 @@ Integration of Above Rest API Calls to ReactJS
                 
         => dispatch & subscription  (component)
 
+25-06-2021
+==========
+
+1) LoadingBox
+
+        if "loading" is "false", show "LoadingBox"
+
+2) MessageBox
+
+        if "error" equals "Network Error" show MessageBox
+                props ==> variant
+                {error}
+
+
+3) Condional Rendering
+
+4) Single Page Application
+
+
 
 
 
