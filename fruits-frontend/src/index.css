@@ -1,16 +1,20 @@
+html{
+   font-size: 62.5%;
+   font-family:  Helvetica, sans-serif,Arial;
+   box-sizing: border-box;
+}
+
 body {
+  font-size: 1.6rem;
   margin: 0;
   font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
     'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
     sans-serif;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
+  height: 100vh;
 }
 
-code {
-  font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
-    monospace;
-}
 
 .alert{
    border: 1px solid gray;
@@ -34,6 +38,83 @@ code {
   justify-content: center;
   align-items: center;
 }
+
+.grid-container{
+    display: grid;
+    grid-template-areas: 
+      "h"
+      "m"
+      "f";
+    height: 100vh;
+    grid-template-columns: 1fr;
+    grid-template-rows: 5rem 1fr 5rem;
+}
+
+header{
+  grid-area: "h";
+  background-color: #203040;
+}
+
+main{
+  grid-area: "m";
+  padding: 1rem;
+}
+
+footer{
+  grid-area: "f";
+  background-color: #203040;
+  color: #fff;
+}
+
+.row{
+   display: flex;
+   flex-wrap: wrap;
+   justify-content: space-between;
+   align-content: center;
+}
+
+a{
+  color: white;
+  text-decoration: none;
+  margin-right: 10px;
+}
+
+a.brand{
+  font-size: 3rem;
+}
+
+.center{
+  justify-content: center;
+}
+
+
+
+a:hover{
+  color: #ffa500;
+}
+
+.card{
+  border: 0.1rem solid #c0c0c0;
+  background-color: #f8f8f8;
+  margin: 1rem;
+  text-align: center;
+  border-radius: 0.5rem;
+}
+
+.card-body >*{
+    margin-bottom: 0.5rem;
+}
+
+h2{
+  font-size: 1.6rem;
+}
+
+.price{
+  font-size: 2rem;
+  font-weight: 900;
+}
+
+
 
 
 

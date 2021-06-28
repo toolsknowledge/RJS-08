@@ -19,7 +19,23 @@ class Products extends Component<IProps,IState>{
         const {loading,products,error} = this.props.result;
         return(
            <React.Fragment>
-               {!loading?(<LoadingBox></LoadingBox>):error==="Network Error"?(<MessageBox variant="danger">{error}</MessageBox>):(<div>{JSON.stringify(products)}</div>)}
+               {!loading?(<LoadingBox></LoadingBox>):
+               error==="Network Error"?(<MessageBox variant="danger">{error}</MessageBox>):
+               (<div className="row center">
+                    {products.map((obj:any)=>(
+                        <div key={obj._id} className="card">
+                            <a href="#">
+                                <img src={obj.image} width="200" height="200"></img>
+                            </a>
+                            <div className="card-body">
+                                <h2>{obj.name}</h2>
+                                <div className="price">
+                                    Price $ {obj.price}
+                                </div>
+                            </div>
+                        </div>
+                    ))}
+               </div>)}
            </React.Fragment>
         )
     }
