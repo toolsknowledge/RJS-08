@@ -791,6 +791,71 @@ Integration of Above Rest API Calls to ReactJS
 
 
 
+29-06-2021
+==========
+
+                        ***** Category Module ******
+
+
+**************************************************
+fruits_frontend
+              src
+                model   
+                    Product.tsx
+
+                types
+                    CategoryActionTypes.tsx
+
+                actions
+                    CategoryActions.tsx
+
+                reducer
+                    CategoryReducer.tsx
+                
+                index.tsx
+
+                Category.tsx
+
+                App.tsx
+
+                index.css
+
+
+
+
+
+                    
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 
