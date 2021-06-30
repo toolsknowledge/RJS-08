@@ -8,9 +8,12 @@ import productReducer from './reducer/ProductReducer';
 import { createStore } from 'redux';
 import thunk from 'redux-thunk';
 import { Provider } from "react-redux";
+import CategoryReducer from './reducer/CategoryReducer';
+import Category from './Category';
 
 const rootReducer = combineReducers({
-  "products":productReducer
+  "products":productReducer,
+  "category":CategoryReducer
 });
 
 

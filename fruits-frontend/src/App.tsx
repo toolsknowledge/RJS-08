@@ -35,7 +35,7 @@ class App extends Component<IProps,IState>{
                       </header>
 
                       <main>
-                        <Route path="/" component={Products} exact={true} strict></Route>
+                            <Route path="/" component={Products} exact={true} strict></Route>
                       </main>
 
                       <footer className="row center">
