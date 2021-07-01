@@ -8,17 +8,28 @@
 import React, { Component } from "react";
 import { BrowserRouter, Route } from "react-router-dom";
 import Products from "./Products";
+import { connect } from "react-redux";
 
 
 interface IState{}
 
-interface IProps{}
+interface IProps{
+    result:any;
+}
 
 class App extends Component<IProps,IState>{
     constructor(props:IProps){
         super(props);
     }
+
+    selectedValue = (category:any)=>{
+        console.log(category);
+        
+    }
+
+
     render(){
+        
        return(
          <React.Fragment>
              <BrowserRouter>
@@ -27,6 +38,15 @@ class App extends Component<IProps,IState>{
                           <div>
                               <a href="#" className="brand">Fruits</a>
                           </div>
+
+                           <div>
+                               <select onChange={(e)=>{this.selectedValue(e.target.value)}}>
+                                     {this.props.result.map((element:any,index:number)=>(
+                                         <option value={element}>{element}</option>
+                                     ))}
+                               </select>
+                           </div>
+
 
                           <div>
                               <a href="#">cart</a>
@@ -48,4 +68,23 @@ class App extends Component<IProps,IState>{
     }
 };  
 
-export default App;
+
+const receive = (state:any)=>{
+    const arr:any[] = [];
+    state.products.products.forEach((element:any,index:number)=>{
+        arr.push(element.category)
+    })
+    const arr1 = [...new Set(arr)]
+    return{
+        result : arr1
+    }
+};
+
+
+const send = (dispatch:any)=>{
+    return{
+
+    }
+}
+
+export default connect(receive,send)(App);
