@@ -11,7 +11,7 @@ const getCategory = (category:any)=>{
             error : ""
         })
         try{
-            const res = await axios.get(`http://localhost:8080/products/${category}`);
+            const res = await axios.get(`${process.env.REACT_APP_BASE_URL}/products/${category}`);
             const { data } = res;
             dispatch({
                 type : CATEGORY_LOADING_SUCCESS,

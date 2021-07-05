@@ -11,7 +11,8 @@ const getProducts = ()=>{
             error : ""
         })
         try{
-            const res = await axios.get(`http://localhost:8080/products`);
+            console.log(process.env.REACT_APP_BASE_URL);
+            const res = await axios.get(`${process.env.REACT_APP_BASE_URL}/products`);
             const { data } = res;
             dispatch({
                 type : PRODUCTS_LOADING_SUCCESS,

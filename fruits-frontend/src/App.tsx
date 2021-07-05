@@ -1,20 +1,16 @@
-/*
-    1) grid-container
-    2) row
-    3) brand
-    4) center
-*/
-
 import React, { Component } from "react";
-import { BrowserRouter, Route } from "react-router-dom";
+import { BrowserRouter, Route,NavLink,Redirect } from "react-router-dom";
 import Products from "./Products";
 import { connect } from "react-redux";
+import Category from "./Category";
+import { History, LocationState } from "history";
 
 
 interface IState{}
 
 interface IProps{
     result:any;
+    //history:History<LocationState>; 
 }
 
 class App extends Component<IProps,IState>{
@@ -22,9 +18,10 @@ class App extends Component<IProps,IState>{
         super(props);
     }
 
-    selectedValue = (category:any)=>{
-        console.log(category);
-        
+     selectedValue = (category:any)=>{
+            console.log(category);
+            //return (<Redirect to="/category"></Redirect>)
+            //return window.location.href=`/category`;
     }
 
 
@@ -41,13 +38,12 @@ class App extends Component<IProps,IState>{
 
                            <div>
                                <select onChange={(e)=>{this.selectedValue(e.target.value)}}>
+                                    <option value="">Choose Category</option>
                                      {this.props.result.map((element:any,index:number)=>(
-                                         <option value={element}>{element}</option>
+                                        <option key={index}>{element}</option>
                                      ))}
                                </select>
                            </div>
-
-
                           <div>
                               <a href="#">cart</a>
                               <a href="#">signin</a>
@@ -56,6 +52,7 @@ class App extends Component<IProps,IState>{
 
                       <main>
                             <Route path="/" component={Products} exact={true} strict></Route>
+                            <Route path="/category/:category" component={Category} exact={true} strict></Route>
                       </main>
 
                       <footer className="row center">
