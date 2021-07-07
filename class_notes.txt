@@ -821,32 +821,77 @@ fruits_frontend
                 index.css
 
 
+Deployment
+==========
+
+Backend Deployment
+==================
+
+1) push backend code to GitHub
+
+2) create the application in aws account
+
+3) implement CI/CD Process
 
 
+frontend Deployment
+==================
+1) configure cloud backend url in reactjs
 
-                    
-
-
-
-
-
+    .env
 
 
+2) install aws cli tool
 
 
+3) prepare the production build
+
+    > npm run build
 
 
+4) create the s3 bucket
+
+     bucket policy
+     =============
+     {
+        "Version": "2012-10-17",
+        "Statement": [
+            {
+                "Sid": "PublicReadGetObject",
+                "Effect": "Allow",
+                "Principal": "*",
+                "Action": "s3:GetObject",
+                "Resource": "arn:aws:s3:::deploy-app-ashokit/*"
+            }
+        ]
+    }
 
 
+5) create the IAM
 
 
+6) edit the package.json file
 
 
+7) execute the following comnands
+
+    > aws configure
+
+    > npm run build
+
+    > npm run deploy
 
 
+Bugs
+====
 
+Unit Test Cases
 
+Charts
 
+Hooks
+
+Forms with Validations
 
 
 

@@ -1,35 +1,45 @@
 import React, { Component } from "react";
-import { BrowserRouter, Route,NavLink,Redirect } from "react-router-dom";
+import { BrowserRouter, Route  } from "react-router-dom";
 import Products from "./Products";
 import { connect } from "react-redux";
 import Category from "./Category";
-import { History, LocationState } from "history";
+import { Redirect } from "react-router";
 
-
-interface IState{}
+interface IState{
+    selected : string;
+}
 
 interface IProps{
     result:any;
-    //history:History<LocationState>; 
+    
 }
 
 class App extends Component<IProps,IState>{
+    
     constructor(props:IProps){
         super(props);
+        this.state = {
+            selected : ""
+        }
+        
     }
 
      selectedValue = (category:any)=>{
-            console.log(category);
-            //return (<Redirect to="/category"></Redirect>)
-            //return window.location.href=`/category`;
-    }
+            if(category){
+                this.setState({
+                    selected : category
+                })
+            }
+
+        }
 
 
     render(){
-        
+       const { selected } = this.state;
        return(
          <React.Fragment>
              <BrowserRouter>
+                  {selected!="" ?(<Redirect to={`/category?type=${selected}`}></Redirect>):(
                   <div className="grid-container">
                       <header className="row">
                           <div>
@@ -37,11 +47,17 @@ class App extends Component<IProps,IState>{
                           </div>
 
                            <div>
-                               <select onChange={(e)=>{this.selectedValue(e.target.value)}}>
+                           
+                               <select onChange={(e)=>{ this.selectedValue(e.target.value) }}>
                                     <option value="">Choose Category</option>
-                                     {this.props.result.map((element:any,index:number)=>(
-                                        <option key={index}>{element}</option>
-                                     ))}
+                                     
+                                         {this.props.result.map((element:any,index:number)=>(
+                                            <option key={index} value={element}>
+                                                {element}    
+                                            </option>
+                                        ))}
+                                    
+
                                </select>
                            </div>
                           <div>
@@ -52,13 +68,14 @@ class App extends Component<IProps,IState>{
 
                       <main>
                             <Route path="/" component={Products} exact={true} strict></Route>
-                            <Route path="/category/:category" component={Category} exact={true} strict></Route>
+                            <Route path="/category" component={Category} exact={true} strict></Route>
                       </main>
 
                       <footer className="row center">
                           miniproject@ashokit.in
                       </footer>
                   </div>
+                  )}
              </BrowserRouter>
          </React.Fragment>
        )

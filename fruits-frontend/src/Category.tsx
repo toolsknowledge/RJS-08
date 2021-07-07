@@ -4,7 +4,7 @@ import getCategory from "./actions/CategoryActions";
 import LoadingBox from "./common/LoadingBox";
 import MessageBox from "./common/MessageBox";
 //import { match as Match } from "react-router-dom";
-
+import { Location } from "history";
 
 interface IState{}
 
@@ -12,6 +12,7 @@ interface IProps{
     getCategoryData:any;
     result:any;
     //match:Match<routeParams>;
+    location:Location;
 }
 
 // interface routeParams{
@@ -26,11 +27,12 @@ class Category extends Component<IProps,IState>{
     }
 
     componentDidMount(){
-        
-        this.props.getCategoryData("grapes");
+        const query = this.props.location.search?this.props.location.search.split("=")[1]:"banana"; 
+        this.props.getCategoryData(query);
     }
 
     render(){
+       
         const {loading,category,error} = this.props.result;
         return(
             <React.Fragment>
