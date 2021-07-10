@@ -1,0 +1,134 @@
+1) hooks
+
+2) unit test cases  
+
+3) payment gateways
+
+4) chartjs / d3js Example
+
+5) AWS Deployment
+
+6) Fix the Issue with Project
+
+7) Pure Components
+
+
+deploy the server in aws
+========================
+
+1) create the github repository
+
+2) create the application in aws
+
+3) create the CI/CD process
+
+
+
+frontend Deployment
+===================
+
+1) install aws cli tool
+
+    website : https://aws.amazon.com/cli/
+
+    file    : AWSCLIV2.msi
+
+2) create the user credentials
+        IAM
+
+3) create the production build
+
+    > npm run build
+
+4) push production build to s3 bucket
+
+    => static website hosting   (properties)
+
+    => bucket policies  (permissions)
+
+
+5) edit the package.json file
+
+    "deploy": "aws s3 cp --recursive ./build s3://finalapp"
+
+6) execute the following commands
+
+        > aws configure
+
+        > npm run build
+
+        > npm run deploy
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
