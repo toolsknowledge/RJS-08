@@ -31,6 +31,14 @@ class Category extends Component<IProps,IState>{
         this.props.getCategoryData(query);
     }
 
+    componentDidUpdate(prevProps:any) {
+        
+        // if (this.props.match.params.type !== prevProps.match.params.type) {
+        //     this.props.getCategoryData(this.props.match.params.type);
+        // }
+        
+      }
+
     render(){
        
         const {loading,category,error} = this.props.result;

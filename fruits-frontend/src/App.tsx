@@ -1,12 +1,13 @@
 import React, { Component } from "react";
-import { BrowserRouter, Route  } from "react-router-dom";
+import { BrowserRouter, Route, Router  } from "react-router-dom";
 import Products from "./Products";
 import { connect } from "react-redux";
 import Category from "./Category";
-import { Redirect } from "react-router";
+import { createBrowserHistory } from "history"
 
 interface IState{
-    selected : string;
+    
+    history:any;
 }
 
 interface IProps{
@@ -19,27 +20,25 @@ class App extends Component<IProps,IState>{
     constructor(props:IProps){
         super(props);
         this.state = {
-            selected : ""
+            history : createBrowserHistory()
         }
-        
     }
 
      selectedValue = (category:any)=>{
-            if(category){
-                this.setState({
-                    selected : category
-                })
-            }
+            console.log(category);
+            this.state.history.push(`/category?type=${category}`);
+     }
 
-        }
+
+     
 
 
     render(){
-       const { selected } = this.state;
+       
        return(
          <React.Fragment>
-             <BrowserRouter>
-                  {selected!="" ?(<Redirect to={`/category?type=${selected}`}></Redirect>):(
+             <Router history={this.state.history}>
+                  
                   <div className="grid-container">
                       <header className="row">
                           <div>
@@ -75,8 +74,8 @@ class App extends Component<IProps,IState>{
                           miniproject@ashokit.in
                       </footer>
                   </div>
-                  )}
-             </BrowserRouter>
+                  
+             </Router>
          </React.Fragment>
        )
     }
